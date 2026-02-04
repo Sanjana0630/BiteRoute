@@ -1,0 +1,22 @@
+.footer {
+    background-color: #000000 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.footer strong {
+    color: #f2b705;
+    /* Mustard yellow to match Navbar hover/accents */
+}
+
+.footer button {
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.footer button:hover {
+    background-color: #f2b705;
+    border-color: #f2b705;
+    color: #000;
+}

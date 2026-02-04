@@ -1,0 +1,331 @@
+/* ===============================
+   GLOBAL RESET & BASE
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===============================
+   NAVBAR (BLACK THEME)
+================================ */
+.navbar {
+  background-color: #000000 !important;
+
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #f2b705 !important;
+}
+
+/* ===============================
+   COMMON PAGE CENTER
+================================ */
+.login-page,
+.user-login-page,
+.register-page {
+  /* min-height: 100vh; -- REMOVED to prevent global layout overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff1eb, #e7f5f4);
+  padding: 16px;
+  flex: 1;
+  /* Take remaining space */
+}
+
+/* ===============================
+   AUTH BOXES (LOGIN / REGISTER)
+================================ */
+.login-box,
+.user-login-box,
+.register-box {
+  width: 100%;
+  max-width: 380px;
+  padding: 38px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  text-align: center;
+  animation: fadeUp 0.8s ease;
+}
+
+/* ===============================
+   FOOD SQUARE IMAGES (LOGIN)
+================================ */
+.food-square {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.food-square img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.food-square img:hover {
+  transform: translateY(-6px);
+}
+
+/* ===============================
+   INPUTS & BUTTONS
+================================ */
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn-success {
+  background-color: #4db6ac;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #399c94;
+}
+
+.register-link {
+  color: #4db6ac;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   OR DIVIDER
+================================ */
+.or-divider {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.or-divider span {
+  margin: 0 10px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* ===============================
+   GOOGLE BUTTON
+================================ */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* ===============================
+   HOME PAGE
+================================ */
+.home-bg {
+  /* Center Content & Disable Scroll */
+  height: 100vh;
+  /* Fixed height */
+  overflow: hidden;
+  /* No scroll */
+  display: flex;
+  align-items: center;
+  /* Vertical Center */
+  justify-content: center;
+  /* Horizontal Center */
+}
+
+
+.home-bg>.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  /* Increased from 900px to allow wider cards */
+}
+
+/* ===============================
+   MENU CARDS (3D EFFECT)
+================================ */
+.menu-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ===============================
+   MENU CARD CONTENT COLORS
+================================ */
+.menu-content {
+  padding: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Soft colorful accents */
+.bg-success {
+  background-color: #4db6ac !important;
+  /* teal */
+}
+
+.bg-warning {
+  background-color: #f2b705 !important;
+  /* mustard */
+}
+
+.bg-danger {
+  background-color: #c06c84 !important;
+  /* maroon */
+}
+
+.bg-info {
+  background-color: #6c9bd2 !important;
+  /* blue */
+}
+
+.bg-dark {
+  background-color: #6d597a !important;
+  /* purple */
+}
+
+.menu-content h5 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.menu-content p {
+  font-size: 13px;
+  margin: 0;
+  color: #f8f8f8;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .menu-card img {
+    height: 160px;
+  }
+
+  .login-box,
+  .user-login-box,
+  .register-box {
+    padding: 28px;
+  }
+}
+
+
+.register-box {
+  width: 100%;
+  max-width: 520px;
+  /* ⬅️ increased width */
+  padding: 40px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  animation: fadeUp 0.9s ease;
+}
+
+
+.custom-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  /* VERY IMPORTANT */
+}
+
+.custom-modal {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  width: 340px;
+}
+
+.map-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-box {
+  background: white;
+  padding: 15px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+}

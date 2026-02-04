@@ -1,0 +1,4 @@
+ID: 7 | Name: 'Jay Ganesh' | Owner: sandesh | Appr: True | Rej: False
+ID: 8 | Name: 'Durga Cafe' | Owner: sandesh | Appr: True | Rej: False
+ID: 10 | Name: 'Balaji' | Owner: Sai Moralwar | Appr: True | Rej: False
+ID: 11 | Name: 'Midland' | Owner: Sai Moralwar | Appr: False | Rej: True

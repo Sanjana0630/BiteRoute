@@ -1,0 +1,2 @@
+Hotel ID: 10 | Name: Balaji | Owner ID: 4
+Hotel ID: 11 | Name: Midland | Owner ID: 4

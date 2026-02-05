@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: biteroute-backend
+    runtime: python
+    rootDir: backend/biteroute_backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn biteroute_backend.wsgi
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.4
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: CORS_ALLOW_ALL_ORIGINS
+        value: "True"

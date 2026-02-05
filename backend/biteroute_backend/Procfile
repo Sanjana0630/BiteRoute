@@ -1,0 +1,1 @@
+web: gunicorn biteroute_backend.wsgi

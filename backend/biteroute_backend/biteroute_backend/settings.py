@@ -17,10 +17,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 # ======================
 SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-temp-key")
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["*" "biteroute.onrender.com",
-    ".onrender.com" ]
+ALLOWED_HOSTS = ["*", "biteroute.onrender.com", ".onrender.com"]
 
 
 # ======================

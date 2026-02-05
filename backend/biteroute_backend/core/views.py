@@ -239,6 +239,7 @@ def hotel_login(request):
 # ================= COMMON LOGIN =================
 
 @api_view(["POST"])
+@permission_classes([AllowAny])
 def common_login(request):
     contact = request.data.get("contact")
     password = request.data.get("password")

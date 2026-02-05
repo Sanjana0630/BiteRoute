@@ -3,7 +3,7 @@ services:
     name: biteroute-backend
     runtime: python
     rootDir: backend/biteroute_backend
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
     startCommand: gunicorn biteroute_backend.wsgi
     envVars:
       - key: PYTHON_VERSION
@@ -14,3 +14,7 @@ services:
         value: "False"
       - key: CORS_ALLOW_ALL_ORIGINS
         value: "True"
+      - key: ADMIN_EMAIL
+        value: "admin@1234.com"
+      - key: ADMIN_PASSWORD
+        value: "admin123"
